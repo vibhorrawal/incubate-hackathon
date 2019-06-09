@@ -1,0 +1,15 @@
+# Pseudocode
+
+power_prediction = model.predict(p)
+
+for i in period(p):
+    t = [ ]                     // time periods where Power > threshold
+    if power_prediction(i) > limit:
+        t.append(i)
+
+
+ do:
+   users += select-users(t) // in interval t which have schedulable device
+ untill: power_prediction < threshold
+
+ send-notification(users,time)
